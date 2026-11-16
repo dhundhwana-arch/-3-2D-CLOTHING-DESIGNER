@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom shirt designer styles */
+.shirt-canvas {
+  @apply relative w-full h-full bg-white rounded-lg shadow-inner overflow-hidden;
+}
+
+.shirt-svg {
+  @apply w-full h-full;
+}
+
+.component-layer {
+  @apply transition-colors duration-300 ease-in-out;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .designer-layout {
+    @apply flex-col;
+  }
+  .controls-panel {
+    @apply w-full max-w-md;
+  }
+  .preview-panel {
+    @apply w-full;
+  }
+}
+
+/* Accessibility */
+.focus-visible:outline-none .focus-visible:ring-2 .focus-visible:ring-offset-2 .focus-visible:ring-blue-500 {
+  @apply outline-none ring-2 ring-offset-2 ring-blue-500;
+}
