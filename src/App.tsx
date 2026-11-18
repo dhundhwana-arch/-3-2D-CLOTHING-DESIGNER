@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { DesignerWorkspace } from './components/designer/DesignerWorkspace'
 import { DesignerToolbar } from './components/designer/DesignerToolbar'
 import { DesignControls } from './components/designer/DesignControls'

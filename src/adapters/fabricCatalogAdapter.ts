@@ -63,10 +63,10 @@ export class MockFabricAdapter implements FabricCatalogAdapter {
 
 // Production adapter placeholder (Phase 9.2)
 export class ProductionFabricAdapter implements FabricCatalogAdapter {
-  private apiUrl: string
+  // Removed unused apiUrl: string (Phase 3 cleanup)
 
-  constructor(apiUrl: string = 'https://api.fabric-catalog-system.example.com') {
-    this.apiUrl = apiUrl
+  constructor() {
+    // Default production API URL handled by environment config
   }
 
   async listFabrics(): Promise<FabricRecord[]> {
@@ -74,8 +74,9 @@ export class ProductionFabricAdapter implements FabricCatalogAdapter {
     throw new Error('Production adapter not yet implemented')
   }
 
-  async getFabricById(fabricId: string): Promise<FabricRecord | null> {
+  async getFabricById(_fabricId: string): Promise<FabricRecord | null> {
     // TODO: Implement actual API call to Module 02
+    // Removed unused fabricId parameter warning (Phase 3 cleanup)
     throw new Error('Production adapter not yet implemented')
   }
 }
